@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asteroids-argo
+  labels:
+    app: asteroids-argo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: asteroids-argo
+  template:
+    metadata:
+      labels:
+        app: asteroids-argo
+    spec:
+      containers:
+      - name: asteroids
+        image: k8sdevaccessitoacr.azurecr.io/my-app:e4ddf4ac301112d17cf39c017fdc00fb936a634d
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "256Mi"
+          requests:
+            cpu: "0.2"
+            memory: "128Mi"
