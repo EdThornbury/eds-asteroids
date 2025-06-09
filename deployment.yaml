@@ -5,7 +5,7 @@ metadata:
   labels:
     app: asteroids-argo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: asteroids-argo
@@ -13,7 +13,6 @@ spec:
     metadata:
       labels:
         app: asteroids-argo
-        azure.workload.identity/use: "true"
     spec:
       containers:
       - name: asteroids
