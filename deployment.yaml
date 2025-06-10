@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: asteroids
-        image: k8sdevaccessitoacr.azurecr.io/my-app:4a21d7e160c80dbb8ba86f6d32376b52488065f5
+        image: k8sdevaccessitoacr.azurecr.io/my-app:0e330d537a8c6111c60ed16cf774e9137e0824d6
         ports:
         - containerPort: 80
         resources:
