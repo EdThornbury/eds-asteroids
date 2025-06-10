@@ -12,7 +12,7 @@ metadata:
     nginx.ingress.kubernetes.io/auth-response-headers: "x-auth-request-user, x-auth-request-email, authorization, x-forwarded-host"
 spec:
   rules:
-  - host: asteroids_flux.k8sdevaccessito.uk
+  - host: asteroids-flux.k8sdevaccessito.uk
     http:
       paths:
       -  pathType: Prefix
